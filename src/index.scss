@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&family=Baloo+Da+2&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-pattern {
+  @apply bg-gray bg-[length:64px_64px];
+  background-image: linear-gradient(#70707050 1px, transparent 1px),
+    linear-gradient(to right, #70707050 1px, #efece7 1px);
+}
+
+.btn {
+  @apply w-full rounded-lg border-2 border-black py-4 transition-all duration-150;
+}
+.btn:hover {
+  @apply shadow-bottom;
+}
+.btn:active {
+  @apply translate-y-1 shadow-[0px_1px_0px_#000400];
+}
+
+.form-control {
+  @apply flex w-full flex-col border-2 border-black bg-white py-4 px-6 focus-visible:outline-none;
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border-2 border-black bg-white shadow-bottom;
+  }
+  .card-body {
+    @apply flex flex-col space-y-4 p-6;
+  }
+  .card-avatar {
+    @apply h-11 w-11 rounded-full border-2 border-black object-cover;
+  }
+  .card-image {
+    @apply aspect-video rounded-lg border-2 border-black object-cover object-center;
+  }
+}
+
+@layer components {
+  .circle {
+    @apply h-2 w-2 rounded-full border border-[#707070];
+  }
+  .circle__green {
+    @apply bg-[#83C51D];
+  }
+  .circle__red {
+    @apply bg-[#DE4B63];
+  }
+  .circle__yellow {
+    @apply bg-[#FAA722];
+  }
+}
